@@ -75,6 +75,7 @@ function protected(req, res, next) {
   const {username, password} = req.headers
 
   if(username && password) {
+Users.findById({username})
 
   } else {
     res.status(400).json({message: 'please provide credentials'})
